@@ -29,9 +29,12 @@ async function createWallet(){
   });
 
   const account = wallet.accounts[0];
+
+
   
   // Get the address from the private key
   const testnetAddress = getStxAddress(account, 'testnet');
+  console.log('private key', account.stxPrivateKey);
   console.log('Wallet Address:', testnetAddress);
   console.log('Wallet Details:', wallet.accounts[0]);
 }
