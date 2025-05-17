@@ -9,9 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@stacks/connect": "^8.1.9",
-    "@stacks/transactions": "^7.0.6",
-    "@stacks/wallet-sdk": "^7.0.6",
+    "ethers": "6",
     "next": "15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
