@@ -1,0 +1,144 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_childAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_secret",
+						"type": "string"
+					}
+				],
+				"name": "addChild",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_parent",
+						"type": "address"
+					}
+				],
+				"name": "getChildCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_parent",
+						"type": "address"
+					}
+				],
+				"name": "getChildren",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "childAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "secret",
+								"type": "string"
+							}
+						],
+						"internalType": "struct ParentChildRegistry.Child[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addChild(address,string)": {
+					"params": {
+						"_childAddress": "The child's wallet address",
+						"_secret": "The secret string (e.g., private key or other sensitive info)"
+					}
+				},
+				"getChildCount(address)": {
+					"params": {
+						"_parent": "The parent address"
+					}
+				},
+				"getChildren(address)": {
+					"params": {
+						"_parent": "The parent address"
+					},
+					"returns": {
+						"_0": "Array of children (including secret)"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addChild(address,string)": {
+					"notice": "Add a child under the calling parent's registry"
+				},
+				"getChildCount(address)": {
+					"notice": "Get the number of children a parent has"
+				},
+				"getChildren(address)": {
+					"notice": "View all children under a parent"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/parentChildRegistry.sol": "ParentChildRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/parentChildRegistry.sol": {
+			"keccak256": "0xad0b72435c232ffd3af3ed0f685b8c534935117669853598f2d9134b04285e95",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://200f0d9732c22fb44de18ac0875aa3a52070dff2dbf0734a6c2d0e69be89cfc6",
+				"dweb:/ipfs/QmT5wMGEngCj5HPEeewfqwxrjtAHUT9R8sghtcjHaQW7he"
+			]
+		}
+	},
+	"version": 1
+}
